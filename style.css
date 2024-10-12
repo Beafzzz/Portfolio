@@ -1,4 +1,4 @@
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
     width: 10px;  
   }
 
@@ -39,8 +39,19 @@ body{
 }
 
 .me-pic{
-    width: 256px;
-    height: 256px;
+    background-image: url("assets/images/me.jpg");
+    background-size: 320px 320px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px #ffc2fc;
+    transition-duration: 0.35s;
+}
+
+.me-pic:hover{
+    background-image: url("https://media1.tenor.com/m/r0ekx4XglNwAAAAC/dog-beer-happy-dog.gif");
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     box-shadow: 0px 0px 50px #ffc2fc
 }

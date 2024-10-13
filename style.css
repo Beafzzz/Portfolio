@@ -146,7 +146,7 @@ body{
     border-radius: 50%;
 }
 
-.me-pic:after:hover {
+.me-pic:hover:after {
     background-size: 380px 380px;
     background-image: url("https://media1.tenor.com/m/r0ekx4XglNwAAAAC/dog-beer-happy-dog.gif");
 }

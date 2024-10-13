@@ -102,6 +102,7 @@ body{
     display: flex;
     margin-top: 250px;
     width: 100%;
+    height: 800px;
     justify-content: center;
     gap: 350px;
 }
@@ -110,7 +111,7 @@ body{
     width: 380px;
     height: 380px;
     border-radius: 50%;
-    transition-duration: 0.35s;
+    transition-duration: 0.4s;
     border: none;
     position: relative;
     z-index: 1;
@@ -144,6 +145,7 @@ body{
     background-size: 380px 380px;
     background-image: url("assets/images/me.jpg");
     border-radius: 50%;
+    transition-duration: 0.4s;
 }
 
 .me-pic:hover:after {
@@ -171,7 +173,7 @@ body{
     color: white;
     justify-content: center;
     align-items: center;
-    transition-duration: 0.35s;
+    transition-duration: 0.4s;
 }
 
 .about-me-button:hover{
@@ -229,39 +231,58 @@ body{
 
 
 .section1 {
-    height: 1200px;
+    height: 1000px;
 }
 
 .sec1{
     display: flex;
-    padding-top: 30px;  
+    margin-top: 50px;
     justify-content: space-around;
     align-items: center;
 }
 
 .sec1-box {
     display: flex;
-    margin-top: 320px;
     height: 120px;
     justify-content: center;
     align-items: center;
     font-size: 36px;
 }
 
-.skills1 {
-    display: flex;
+.python {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    height: 360px;
     flex-direction: column;
     align-items: center;
     text-align: center;
     line-height: 36px;
-    height: 720px;
     border: none;
-    position: relative;
     z-index: 0;
     border-radius: 36px;
+    transition-duration: 0.7s;
 }
 
-.skills1:before {
+.python:before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    left: -2px;
+    background-size: 400%;
+    background-color: #FFA3FA;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing1 5s ease-in-out infinite;
+    transition-duration: 0.7s;
+    opacity: 1;
+    border-radius: 36px;
+    
+}
+
+.python:hover:before {
     content: '';
     position: absolute;
     top: -2px;
@@ -271,14 +292,13 @@ body{
     z-index: -1;
     filter: blur(5px);
     width: calc(100% + 4px);
-    height: calc(100% + 4px);
+    height: 754px;
     animation: glowing1 5s ease-in-out infinite;
     opacity: 1;
-    transition: opacity .3s ease-in-out;
     border-radius: 36px;
 }
 
-.skills1:after {
+.python:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -286,46 +306,17 @@ body{
     height: 100%;
     background: #111;
     left: 0;
-    top: 0;
+    top: 180px;
     border-radius: 36px;
+    transition-duration: 0.7s;
 }
 
-.skills2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    line-height: 36px;
-    height: 720px;
-    border: none;
-    position: relative;
-    z-index: 0;
-    border-radius: 36px;
-}
-
-.skills2:before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    background-color: #FFE1FE;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing2 5s ease-in-out infinite;
-    opacity: 1;
-    transition: opacity .3s ease-in-out;
-    border-radius: 36px;
-}
-
-.skills2:after {
+.python:hover:after {
     z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 750px;
     background: #111;
     left: 0;
     top: 0;
@@ -334,18 +325,227 @@ body{
 
 .skills-small-text{
     width: 450px;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.python:hover .skills-small-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 0.7s ease-in-out;
 }
 
 .image-skills{
     width: 256px;
     height: 256px;
     padding-top: 25px;
+    transform: translateY(160px);
+    transition:  transform 0.7s ease;
+}
+
+.python:hover .image-skills{
+    width: 256px;
+    height: 256px;
+    padding-top: 25px;
+    transform: translateY(0px)
 }
 
 .skills-text{
     font-size: 36px;
+    transform: translateY(140px);
+    transition:  transform 0.7s ease;
 }
 
+.python:hover .skills-text{
+    font-size: 36px;
+    transform: translateY(0px)
+}
+
+.CPP {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 36px;
+    height: 360px;
+    border: none;
+    z-index: 0;
+    border-radius: 36px;
+    transition-duration: 0.7s;
+}
+
+.CPP:before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    left: -2px;
+    background-size: 400%;
+    background-color: #FFA3FA;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing1 5s ease-in-out infinite;
+    transition-duration: 0.7s;
+    opacity: 1;
+    border-radius: 36px;
+    
+}
+
+.CPP:hover:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    background-color: #FFA3FA;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: 754px;
+    animation: glowing1 5s ease-in-out infinite;
+    opacity: 1;
+    border-radius: 36px;
+}
+
+.CPP:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 180px;
+    border-radius: 36px;
+    transition-duration: 0.7s;
+}
+
+.CPP:hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 36px;
+}
+
+.CPP:hover .skills-small-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.CPP:hover .image-skills{
+    width: 256px;
+    height: 256px;
+    padding-top: 25px;
+    transform: translateY(0px)
+}
+
+.CPP:hover .skills-text{
+    font-size: 36px;
+    transform: translateY(0px)
+}
+
+.webDev {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 36px;
+    height: 360px;
+    border: none;
+    z-index: 0;
+    border-radius: 36px;
+    transition-duration: 0.7s;
+}
+
+.webDev:before {
+    content: '';
+    position: absolute;
+    top: 180px;
+    left: -2px;
+    background-size: 400%;
+    background-color: #FFA3FA;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing1 5s ease-in-out infinite;
+    transition-duration: 0.7s;
+    opacity: 1;
+    border-radius: 36px;
+    
+}
+
+.webDev:hover:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    background-color: #FFA3FA;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: 754px;
+    animation: glowing1 5s ease-in-out infinite;
+    opacity: 1;
+    border-radius: 36px;
+}
+
+.webDev:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 180px;
+    border-radius: 36px;
+    transition-duration: 0.7s;
+}
+
+.webDev:hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 36px;
+}
+
+.webDev:hover .skills-small-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.webDev:hover .image-skills{
+    width: 256px;
+    height: 256px;
+    padding-top: 25px;
+    transform: translateY(0px)
+}
+
+.webDev:hover .skills-text{
+    font-size: 36px;
+    transform: translateY(0px)
+}
 .section2{
     display: flex;
     height: 1200px;

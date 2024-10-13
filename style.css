@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
 body::-webkit-scrollbar {
     width: 10px;  
 }
@@ -12,8 +16,13 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid #ffc2fc;
 }
 
-html {
-    scroll-behavior: smooth; /* Плавная прокрутка */
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
 }
 
 header{
@@ -35,14 +44,49 @@ header{
 }
 
 .header-button{
+    width: 200px;
+    display: flex;
+    height: 150px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
     list-style-type: none;
+    transition-duration: 0.35s;
+    justify-content: space-around;
 }
 
 .header-button:hover{
-    padding: 100px, 100px, 100px, 100px;
+    display: flex;
     background-color: #ffc2fc;
-    color: white;
-    border: solid 2px green;
+    color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden; 
+}
+
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000; 
+    transform: translate(-50%, -50%);
 }
 
 body{
@@ -54,7 +98,7 @@ body{
     font-weight: 500;
     letter-spacing: 0.5px;
     font-size: 24px;
-    background-image: url("assets/images/background1.png");
+    background-image: url("assets/videos/mixkit-night-sky-covered-with-stars-39768-full-hd.mp4");
 }
 
 .about-me{
@@ -121,4 +165,13 @@ button:hover{
     color: black;
     text-align: center;
     box-shadow: 0px 0px 20px #ffc2fc
+}
+
+
+.section {
+    height: 100vh; /* Высота каждой секции равна высоте экрана */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
 }
